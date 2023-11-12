@@ -1,0 +1,226 @@
+.container {
+    padding: 0 15px 0;
+}
+
+h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+input:valid {
+  border-color: green;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+textarea:valid {
+  border-color: green;
+}
+
+textarea:invalid {
+  border-color: red;
+}
+
+textarea {
+  resize: none;
+}
+
+.nickname{
+    margin-left: 20px;
+    color: floralwhite;
+    font-family: "Bradley Hand ITC";
+    font-size: 30px;
+}
+
+.button-authorized{
+    margin: 20px;
+        position: relative;
+
+}
+
+/*.btn{*/
+/*    width: 80px;*/
+/*}*/
+
+.header-index {
+    margin-bottom: 150px;
+}
+
+#SearchLine{
+  width: 500px;
+}
+
+.navbar {
+    height: 150px;
+}
+.navbar-brand {
+    font-size: 40px;
+}
+
+.question-text{
+    position: static;
+}
+
+.flex-shrink-0 {
+    background: #ffeb7e;
+    width: 100%;
+    height: 100%;
+
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #00000f;
+    border-radius: 50%;
+    overflow: hidden;
+    object-position: 0 0;
+}
+
+.like{
+    width: 25px;
+    height: 25px;
+    object-position: center;
+}
+
+.counterLike{
+    width: 25px;
+    height: 25px;
+}
+
+
+.col-lg-2{
+    margin-bottom: 10px;
+}
+
+.answers-area{
+    border: 2px solid black;
+    border-left: none;
+    border-right: none;
+    padding-top: 20px;
+}
+
+.close-image {
+    display: inline-block;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 104px;
+}
+
+.avatar-navbar {
+    width: 100px;
+    height: 100px;
+    border: 2px solid floralwhite;
+    border-radius: 50%;
+    overflow: hidden;
+    object-position: 0 0;
+}
+
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.questions {
+    border: 2px solid #00000f;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.question {
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+.answer{
+    border: 2px solid #00000f;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 14px;
+}
+
+
+.site-info{
+    border: 2px solid #00000f;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.form-control{
+    overflow: hidden;
+}
+
+.mb-3{
+    margin-right: 20px;
+}
+
+.text-error{
+    color: red;
+    font-size:15px;
+}
+
+.list-group-item{
+    background-color: #ffeb7e;
+    border: 0 solid #00000f;
+}
+
+.badge{
+    text-decoration: none;
+}
+
+.rate{
+    width: 33%;
+    height: 33%;
+    padding: 0;
+    margin-top: 2px;
+    max-width: 26px;
+}
+
+.counter{
+    padding: 0;
+    width: min-content;
+}
+
+.counterLike{
+    padding: 0;
+    font-size: 20px;
+    /*font-family: Arial;*/
+    /*!*padding-top: 5px;*!*/
+    /*border: 1px solid #00000f;*/
+    /*background-color: white;*/
+    width: 33%;
+    height: 33%;
+    /*box-sizing: border-box;*/
+    /*!*width: 100px;*!*/
+}
+
+.plus-minus-buttons-img{
+
+    width: 75%;
+}
+
+.rate-button {
+    padding: 0;
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sticky Footer Navbar Template · Bootstrap v5.2</title>
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+
+<header class="header-index">
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <a class="navbar-brand" href="../templates/index.html">As'ka</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                           id="SearchLine">
+                </form>
+                <div class="ask-button">
+                    <button type="button" class="btn btn-outline-light me-2">Ask</button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse">
+                <div class="container-user-info">
+                    <div class="avatar-navbar">
+                        <img src="../static/img/25333.png" alt="">
+                    </div>
+                </div>
+                <div class="container-user-info">
+                    <div class="nickname">User</div>
+                </div>
+                <div class="container-user-settings">
+                    <div class="button-authorized">
+                        <button type="button" class="btn btn-outline-light me-2">LogOut</button>
+                    </div>
+                    <div class="button-authorized">
+                        <button type="button" class="btn btn-outline-light me-2">Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <h1>New question</h1>
+        <div class="row">
+            <div class="col-9">
+                <div class="mb-3">
+                    <label for="TitleData" class="form-label">Title</label>
+                    <input type="text" class="form-control" minlength="10" maxlength="60" id="TitleData"
+                           placeholder="How to ask a question?" required>
+                </div>
+                <div class="mb-3">
+                    <label for="TextData" class="form-label">Text</label>
+                    <textarea type="text" class="form-control" id="TextData" rows="12" minlength="10" maxlength="800"
+                              required placeholder="Bla bla bla"></textarea>
+                </div>
+                <div class="mb-3 ">
+                    <label for="TagsData" class="form-label">Tags</label>
+                    <input type="text" class="form-control" maxlength="60" id="TagsData">
+                </div>
+
+                <div class="mb-3">
+                    <div class="ask-button">
+                        <button type="button" class="btn btn-outline-dark me-2">Ask</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="site-info">
+                    <div class="row">
+                        <p >Popular Tags</p>
+                        <div class="Tags">
+                            <a href="../templates/tag.html#tag">sport</a>
+                            <a href="../templates/tag.html#tag">IT</a>
+                            <a href="../templates/tag.html#tag">fashion</a>
+                            <a href="../templates/tag.html#tag">VK</a>
+                            <a href="../templates/tag.html#tag">games</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-info">
+                    <div class="row">
+                        <p>Best members</p>
+                        <ul>
+                            <a class="page-link" href="#">Anton</a>
+                            <a class="page-link" href="#">Arhip</a>
+                            <a class="page-link" href="#">Alexey</a>
+                            <a class="page-link" href="#">Alexander</a>
+                            <a class="page-link" href="#">Vladik</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="../static/js/bootstrap.js"></script>
+
+
+</body>
+</html>
