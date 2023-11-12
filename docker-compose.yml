@@ -1,0 +1,38 @@
+version: "1.0"
+services:
+  postgres:
+    container_name: pg_aska
+    image: postgres:16
+    environment:
+      POSTGRES_DB: "Aska"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "123"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - ./db-data:/var/lib/postgresql/pgdata
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+
+  pgadmin:
+    container_name: pgadmin_aska
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pguser@ya.ru"
+      PGADMIN_DEFAULT_PASSWORD: "pgadminpwd"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    restart: unless-stopped
+    networks:
+      - postgres
+
+volumes:
+  pgadmin-data:
+
+networks:
+  postgres:
+    driver: bridge
