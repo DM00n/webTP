@@ -3,61 +3,56 @@
 {% load static %}
 
 {% block content %}
-                <div class="question">
-                    <div class="row">
-                        <div class="col-lg-2">
-                            <div class="avatar">
-                                <img src="../static/img/25333.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-lg-10">
-                            <h2 class="question-title">Lorem ipsum</h2>
-                            <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad blanditiis dolore eius enim
-                                maiores optio pariatur perferendis quae quo sed?
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-2">
+    <div class="question">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="avatar">
+                    <img src="{{ question.author.get_avatar }}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <h2 class="question-title">{{ question.title }}</h2>
+                <div class="question-text">
+                    {{ question.text }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                {% include 'inc/like.html' with likes=question.likes %}
+            </div>
 
-
-
- {% include 'inc/like.html' with likes=answer.likes %}
-
-
-
-                        </div>
-
-                        <div class="col-lg-10">
-                            <div class="row">
-                                <div class="col-lg-3">Tags:</div>
-                                <div class="col-lg-3"><a href="#">sport</a></div>
-                                <div class="col-lg-3"><a href="#">games</a></div>
-                            </div>
-                        </div>
+            <div class="col-lg-10">
+                <div class="row">
+                    <div class="col-lg-2">Tags:</div>
+                    <div class="col-lg-10">
+                        {% for tag in question.tag.all %}
+                            <a href="{% url 'tag' tag_id=tag %}">{{ tag }}</a>
+                        {% endfor %}
                     </div>
                 </div>
+            </div>
 
+        </div>
+    </div>
 
+    <div class="answers-area" id="answers">
 
+        {% for answer in answers.objects_list %}
+            {% include 'inc/answer-item.html' %}
+        {% endfor %}
 
-                <div class="answers-area" id="answers">
+        {% include 'inc/paginator.html' with objects_list=answers.objects_list page_range=answers.page_range %}
+    </div>
+    <div class="mb-3">
+        <label for="TextData" class="form-label">Text</label>
+        <textarea type="text" class="form-control" id="TextData" rows="4" minlength="10" maxlength="200"
+                  required></textarea>
+    </div>
 
-{#cycle#}
-                    {% include 'inc/answer-item.html' %}
-
-{% include 'inc/paginator.html' with objects_list=answers.objects_list page_range=answers.page_range %}
-                </div>
-                <div class="mb-3">
-                    <label for="TextData" class="form-label">Text</label>
-                    <textarea type="text" class="form-control" id="TextData" rows="4" minlength="10" maxlength="200"
-                              required></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <div class="ask-button">
-                        <button type="button" class="btn btn-outline-dark me-2">Answer</button>
-                    </div>
-                </div>
+    <div class="mb-3">
+        <div class="ask-button">
+            <button type="button" class="btn btn-outline-dark me-2">Answer</button>
+        </div>
+    </div>
 {% endblock %}

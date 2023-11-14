@@ -1,26 +1,33 @@
 {% load static %}
+{% load django_template_maths %}
 
-    <div class="site-info">
-        <div class="row">
-            <p>Popular tags</p>
-            <div class="tags">
-                <a class="badge bg-danger" href="../templates/tag.html#tag">sport</a>
-                <a class="badge bg-primary" href="../templates/tag.html#tag">IT</a>
-                <a class="badge bg-black" href="../templates/tag.html#tag">fashion</a>
-                <a class="badge bg-success" href="../templates/tag.html#tag">VK</a>
-                <a class="badge bg-warning" href="../templates/tag.html#tag">games</a>
-            </div>
+<div class="site-info">
+    <div class="row">
+        <p>Popular tags</p>
+        <div class="tags">
+            {% for tag in popular_tags %}
+                {% if tag.id|mod:5 == 0 %}
+                    <a class="badge bg-danger" href="{% url 'tag' tag_id=tag.name %}">{{ tag.name }}</a>
+                {% elif tag.id|mod:5 == 1 %}
+                    <a class="badge bg-primary" href="{% url 'tag' tag_id=tag.name %}">{{ tag.name }}</a>
+                {% elif tag.id|mod:5 == 2 %}
+                    <a class="badge bg-black" href="{% url 'tag' tag_id=tag.name %}">{{ tag.name }}</a>
+                {% elif tag.id|mod:5 == 3 %}
+                    <a class="badge bg-success" href="{% url 'tag' tag_id=tag.name %}">{{ tag.name }}</a>
+                {% elif tag.id|mod:5 == 4 %}
+                    <a class="badge bg-warning" href="{% url 'tag' tag_id=tag.name %}">{{ tag.name }}</a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
-    <div class="site-info">
-        <div class="row">
-            <p>Best members</p>
-            <ul class="list-group">
-                <li class="list-group-item"><a class="page-link" href="#">Anton</a></li>
-                <li class="list-group-item"><a class="page-link" href="#">Arhip</a></li>
-                <li class="list-group-item"><a class="page-link" href="#">Alexey</a></li>
-                <li class="list-group-item"><a class="page-link" href="#">Alexander</a></li>
-                <li class="list-group-item"><a class="page-link" href="#">Vladik</a></li>
-            </ul>
-        </div>
+</div>
+<div class="site-info">
+    <div class="row">
+        <p>Best members</p>
+        <ul class="list-group">
+            {% for member in best_members %}
+                <li class="list-group-item"><a class="page-link" href="#">{{ member.user.username }}</a>
+            {% endfor %}
+        </ul>
     </div>
+</div>
