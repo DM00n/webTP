@@ -1,106 +1,113 @@
 .container {
     padding: 0 15px 0;
+    min-width: auto;
 }
 
 h1 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     text-align: center;
 }
 
+a, p, h1 {
+    overflow: hidden;
+}
+
 input:valid {
-  border-color: green;
+    border-color: green;
 }
 
 input:invalid {
-  border-color: red;
+    border-color: red;
 }
 
 textarea:valid {
-  border-color: green;
+    border-color: green;
 }
 
 textarea:invalid {
-  border-color: red;
+    border-color: red;
 }
 
 textarea {
-  resize: none;
+    resize: none;
 }
 
-.nickname{
+.nickname {
     margin-left: 20px;
     color: floralwhite;
     font-family: "Bradley Hand ITC";
     font-size: 30px;
 }
 
-.button-authorized{
-    margin: 20px;
-        position: relative;
+.button-authorized {
+    margin: 10px;
+    position: relative;
 
 }
 
-/*.btn{*/
-/*    width: 80px;*/
-/*}*/
-
-.header-index {
-    margin-bottom: 150px;
-}
-
-#SearchLine{
-  width: 500px;
+#SearchLine {
+    width: 500px;
 }
 
 .navbar {
-    height: 150px;
+    height: 100px;
 }
+
 .navbar-brand {
     font-size: 40px;
 }
 
-.question-text{
+.question-text {
     position: static;
 }
 
 .flex-shrink-0 {
-    background: #ffeb7e;
-    width: 100%;
-    height: 100%;
-
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
+
 body, html {
+    background: linear-gradient(#dccc1a, #E8D9A9) fixed;
     width: 100%;
     height: 100%;
 }
 
 .avatar {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     border: 1px solid #00000f;
     border-radius: 50%;
     overflow: hidden;
     object-position: 0 0;
 }
 
-.like{
+.like {
     width: 25px;
     height: 25px;
     object-position: center;
 }
 
-.counterLike{
-    width: 25px;
-    height: 25px;
+.counterLike {
+    width: 33%;
+    height: 33%;
+    font-size: 150%;
+    padding: 0;
 }
 
 
-.col-lg-2{
-    margin-bottom: 10px;
+.col-lg-2 {
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 5px;
 }
 
-.answers-area{
+.col-lg-10 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.answers-area {
     border: 2px solid black;
     border-left: none;
     border-right: none;
@@ -149,7 +156,7 @@ img {
     font-size: 14px;
 }
 
-.answer{
+.answer {
     border: 2px solid #00000f;
     padding: 20px;
     border-radius: 6px;
@@ -159,7 +166,7 @@ img {
 }
 
 
-.site-info{
+.site-info {
     border: 2px solid #00000f;
     padding: 20px;
     border-radius: 6px;
@@ -168,56 +175,44 @@ img {
     font-size: 20px;
 }
 
-.form-control{
+.form-control {
     overflow: hidden;
 }
 
-.mb-3{
+.mb-3 {
     margin-right: 20px;
 }
 
-.text-error{
+.text-error {
     color: red;
-    font-size:15px;
+    font-size: 15px;
 }
 
-.list-group-item{
-    background-color: #ffeb7e;
+.list-group-item {
+    background-color: transparent;
     border: 0 solid #00000f;
 }
 
-.badge{
+.badge {
     text-decoration: none;
 }
 
-.rate{
-    width: 33%;
+.rate {
+    width: 25%;
     height: 33%;
     padding: 0;
     margin-top: 2px;
-    max-width: 26px;
+    max-width: 35px;
 }
 
-.counter{
+.counter {
     padding: 0;
-    width: min-content;
+    text-align: center;
+    width: 50%;
 }
 
-.counterLike{
-    padding: 0;
-    font-size: 20px;
-    /*font-family: Arial;*/
-    /*!*padding-top: 5px;*!*/
-    /*border: 1px solid #00000f;*/
-    /*background-color: white;*/
-    width: 33%;
-    height: 33%;
-    /*box-sizing: border-box;*/
-    /*!*width: 100px;*!*/
-}
 
-.plus-minus-buttons-img{
-
+.plus-minus-buttons-img {
     width: 75%;
 }
 

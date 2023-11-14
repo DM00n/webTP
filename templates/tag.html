@@ -3,10 +3,14 @@
 {% load static %}
 
 {% block content %}
+    <h2 class="text-uppercase text-center mb-5">Questions of tag '{{ tag }}'</h2>
 
-                {% include 'inc/question-item.html' %}
+    {% for question in questions.objects_list %}
+        {% include 'inc/question-item.html' %}
+    {% endfor %}
 
-{% include 'inc/paginator.html' with objects_list=questions.objects_list page_range=questions.page_range %}
-
+    {% if questions.objects_list.paginator.num_pages > 1 %}
+        {% include 'inc/paginator.html' with objects_list=questions.objects_list page_range=questions.page_range %}
+    {% endif %}
 
 {% endblock %}

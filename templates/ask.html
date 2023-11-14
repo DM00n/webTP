@@ -3,25 +3,26 @@
 {% load static %}
 
 {% block content %}
-                <div class="mb-3">
-                    <label for="TitleData" class="form-label">Title</label>
-                    <input type="text" class="form-control" minlength="10" maxlength="60" id="TitleData"
-                           placeholder="How to ask a question?" required>
-                </div>
-                <div class="mb-3">
-                    <label for="TextData" class="form-label">Text</label>
-                    <textarea type="text" class="form-control" id="TextData" rows="12" minlength="10" maxlength="800"
-                              required placeholder="Bla bla bla"></textarea>
-                </div>
-                <div class="mb-3 ">
-                    <label for="TagsData" class="form-label">Tags</label>
-                    <input type="text" class="form-control" maxlength="60" id="TagsData">
-                </div>
+    <h2 class="text-uppercase text-center mb-5">Ask question</h2>
+    <div class="mb-3">
+        <label for="TitleData" class="form-label">Title</label>
+        <input type="text" class="form-control" minlength="10" maxlength="60" id="TitleData"
+               placeholder="Title of your question" required>
+    </div>
+    <div class="mb-3">
+        <label for="TextData" class="form-label">Text</label>
+        <textarea type="text" class="form-control" id="TextData" rows="12" minlength="10" maxlength="800"
+                  required placeholder="Text of your question"></textarea>
+    </div>
+    <div class="mb-3 ">
+        <label for="TagsData" class="form-label">Tags</label>
+        <input type="text" class="form-control" maxlength="60" id="TagsData">
+    </div>
 
-                <div class="mb-3">
-                    <div class="ask-button">
-                        <button type="button" class="btn btn-outline-dark me-2">Ask</button>
-                    </div>
-                </div>
+    <div class="mb-3">
+        <div class="ask-button">
+            <button type="button" class="btn btn-outline-dark me-2">Ask</button>
+        </div>
+    </div>
 
 {% endblock %}

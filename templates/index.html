@@ -2,12 +2,12 @@
 
 {% load static %}
 
-{% block content %}
-{% include 'inc/question-item.html' %}
 
-{#  cycle  #}
-    {% include 'inc/question-item.html' %}
-    {% include 'inc/question-item.html' %}
+{% block content %}
+    <h2 class="text-uppercase text-center mb-5">New questions</h2>
+    {% for question in questions.objects_list %}
+        {% include 'inc/question-item.html' with question=question %}
+    {% endfor %}
 
     {% include 'inc/paginator.html' with objects_list=questions.objects_list page_range=questions.page_range %}
 

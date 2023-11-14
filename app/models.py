@@ -1,5 +1,3 @@
-from django.contrib.contenttypes.fields import GenericRelation
-from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
@@ -29,7 +27,7 @@ class Profile(models.Model):
         if self.image:
             return self.image.url
         else:
-            return settings.STATIC_URL + 'img/25333.png'
+            return settings.STATIC_URL + 'img/default.png'
 
 
 class Tag(models.Model):
